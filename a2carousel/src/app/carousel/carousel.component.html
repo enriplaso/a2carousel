@@ -1,11 +1,13 @@
 <div class="carousel-container">
     <div class="carousel-wrapper">
          <div class="carousel-item duplicate-left">  
+           <img src="{{items[0].url}}"/>
         </div>
-        <div class="carousel-item">
+        <div *ngFor="let item of items" class="carousel-item">
+           <img src="{{item.url}}"/>
         </div>
         <div class="carousel-item duplicate-rigth">
-          Test
+         <img src="{{items[items.length-1].url}}"/>
         </div>
     </div>
 </div>

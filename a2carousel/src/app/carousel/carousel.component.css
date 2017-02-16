@@ -1,4 +1,21 @@
 .carousel-container{
     margin: 0 auto;
     width: 100%;
+    overflow: hidden;
+}
+.carousel-wrapper{
+    display: flex;  
+    width:600%;  /*the 100 * number of images*/
+    overflow:hidden;
+}
+.carousel-item{ 
+    float:left;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+img{
+    display:block;
+    width:100%;
+    max-width:100%;
 }
