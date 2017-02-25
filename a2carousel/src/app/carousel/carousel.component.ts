@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CarouselItem } from '../shared/models/carousel-item.model'
 
 @Component({
   selector: 'noa-carousel',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
  
-  @Input() public items:any;
+  @Input() public items:Array<CarouselItem>;
 
   protected deltaX: number; 
     
