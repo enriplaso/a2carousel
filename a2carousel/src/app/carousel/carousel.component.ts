@@ -7,14 +7,34 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
  
-  @Input() items:any;
-  
+  @Input() public items:any;
+
+  protected deltaX: number; 
+    
   constructor() { 
        
   }
 
-  ngOnInit() {
-  
+  public ngOnInit(): void {
+    if(this.items && this.items.length){
+
+    }
   }
+
+  public onResize(): void{
+
+  }
+
+  public swipeLeft(): void {
+
+  }
+
+  public swipeRigth(): void {
+
+  }
+
+
+
+
 
 }

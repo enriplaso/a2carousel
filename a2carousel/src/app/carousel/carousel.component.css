@@ -3,17 +3,24 @@
     width: 100%;
     overflow: hidden;
 }
+
+/*this is the layer where we slide with "pan" gestures
+  It shoud have the with of 100% * number_of_images + 2 (lef and rigth duplicate)
+  with is calculated in the carrousel class and added dinamicaly
+*/
 .carousel-wrapper{
     display: flex;  
     width:600%;  /*the 100 * number of images*/
     overflow:hidden;
 }
+
 .carousel-item{ 
     float:left;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
 }
+
 img{
     display:block;
     width:100%;

@@ -6,8 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
 
-import 'hammerjs';
-
 @NgModule({
   declarations: [
     AppComponent,
