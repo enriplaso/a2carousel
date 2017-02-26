@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit  } from '@angular/core';
 import { CarouselItem } from '../shared/models/carousel-item.model'
 
 @Component({
@@ -6,7 +6,7 @@ import { CarouselItem } from '../shared/models/carousel-item.model'
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit, AfterViewInit  {
   
   @Input() public items:Array<CarouselItem>;
 
@@ -22,7 +22,11 @@ export class CarouselComponent implements OnInit {
     }
   }
 
-  public onResize(): void {
+  ngAfterViewInit() {
+    // available here
+  }
+
+  protected onResize(): void {
 
   }
 
