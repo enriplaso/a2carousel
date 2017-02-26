@@ -1,13 +1,17 @@
 <div class="carousel-container">
-    <div #wraper class="carousel-wrapper">
+    <div #wraper class="carousel-wrapper" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
         <div class="carousel-item duplicate-left">  
            <img src="{{items[0].url}}"/>
         </div>
-        <div *ngFor="let item of items" class="carousel-item">
+        <div *ngFor="let item of items" class="carousel-item" >
            <img src="{{item.url}}"/>
         </div>
         <div class="carousel-item duplicate-rigth">
          <img src="{{items[items.length-1].url}}"/>
+        </div>
+    </div>
+    <div class="budged-container">
+        <div class="budged" *ngFor="let item of items" > 
         </div>
     </div>
 </div>
