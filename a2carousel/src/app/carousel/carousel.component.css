@@ -5,20 +5,14 @@
     text-align: center;
 }
 
-/*this is the layer where we slide with "pan" gestures
-  It shoud have the with of 100% * number_of_images + 2 (lef and rigth duplicate)
-  with is calculated in the carrousel class and added dinamicaly
-*/
 .carousel-wrapper{
     display: flex;  
-    /*width:600%;  /*the 100 * number of images*/
     overflow:hidden;
     width: 100%;
     height: 100%;
     padding-bottom: 20px;
 }
-
-.carousel-item{ 
+.carousel-item-slide{ 
     min-width:100%; /*this is the trick instead to hace the (100%  *(mul) number_of_images)  */
     height: 100%;
     transition-timing-function: ease-out;
@@ -26,13 +20,10 @@
     -moz-transition:transform  0.3s;
     transition:transform 0.3s;
 }
-
-img{
+.carousel-item-slide img{
     display:block;
     width:100%;
-    max-width:100%;
 }
-
 .circle-container{
  width: 100%
 }
@@ -44,7 +35,6 @@ img{
     display: inline-flex;
     margin: 5px;	
 }
-
 .circle-container .active{
      background-color: black;
 }

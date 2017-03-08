@@ -1,12 +1,12 @@
 <div class="carousel-container">
     <div *ngIf="items" #wraper class="carousel-wrapper" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
-        <div class="carousel-item duplicate-left">  
+        <div class="carousel-item-slide duplicate-left">  
            <img src="{{items[0].url}}"/>
         </div>
-        <div *ngFor="let item of items" class="carousel-item" >
+        <div *ngFor="let item of items" class="carousel-item-slide">
            <img src="{{item.url}}"/>
         </div>
-        <div class="carousel-item duplicate-rigth">
+        <div class="carousel-item-slide duplicate-rigth">
          <img src="{{items[items.length-1].url}}"/>
         </div>
     </div>
