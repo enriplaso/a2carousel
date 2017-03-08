@@ -2,6 +2,7 @@
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 /*this is the layer where we slide with "pan" gestures
@@ -10,15 +11,20 @@
 */
 .carousel-wrapper{
     display: flex;  
-    width:600%;  /*the 100 * number of images*/
+    /*width:600%;  /*the 100 * number of images*/
     overflow:hidden;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 .carousel-item{ 
-    float:left;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
+    min-width:100%; /*this is the trick instead to hace the (100%  *(mul) number_of_images)  */
+    height: 100%;
+    transition-timing-function: ease-out;
+    -webkit-transition: transform  0.3s;
+    -moz-transition:transform  0.3s;
+    transition:transform 0.3s;
 }
 
 img{

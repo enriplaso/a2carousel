@@ -29,12 +29,6 @@ export class AppComponent {
     this.items[3] = new CarouselItem();
     this.items[3].url ='../assets/image4.jpg'
     this.items[3].title = 'Image 4';
-
-    /*this.items[0] = {title:"Image 1", url:"../assets/image1.jpg"};
-    this.items[1] = {title:"Image 2", url:"../assets/image2.jpg"};
-    this.items[2] = {title:"Image 3", url:"../assets/image3.jpg"};
-    this.items[3] = {title:"Image 4", url:"../assets/image4.jpg"};*/
-
   }
 
  

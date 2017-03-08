@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit, ElementRef} from '@angular/core';
 import { CarouselItem } from '../shared/models/carousel-item.model'
 
 @Component({
@@ -9,9 +9,11 @@ import { CarouselItem } from '../shared/models/carousel-item.model'
 export class CarouselComponent implements OnInit, AfterViewInit  {
   
   @Input() public items:Array<CarouselItem>;
-
+   
   protected deltaX: number; 
-    
+  protected carousel_width: number;
+  @ViewChild('wraper') wraper: ElementRef;
+
   constructor() { 
        
   }
@@ -24,6 +26,14 @@ export class CarouselComponent implements OnInit, AfterViewInit  {
 
   ngAfterViewInit() {
     // available here
+     if(this.items && this.items.length > 0){
+       this.setWidth();
+     }
+  } 
+
+  protected setWidth(): void {
+     this.carousel_width = this.items.length * 100;
+     this.wraper.nativeElement.style('width', this.carousel_width+'%');
   }
 
   protected onResize(): void {
@@ -47,5 +57,9 @@ export class CarouselComponent implements OnInit, AfterViewInit  {
   
   public onTouchEnd(event: any): void {
       console.log("Touch End");
+  }
+
+  protected translateX(distance: number): void {
+
   }
 }

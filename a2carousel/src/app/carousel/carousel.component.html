@@ -1,5 +1,5 @@
 <div class="carousel-container">
-    <div #wraper class="carousel-wrapper" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
+    <div *ngIf="items" #wraper class="carousel-wrapper" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
         <div class="carousel-item duplicate-left">  
            <img src="{{items[0].url}}"/>
         </div>
@@ -10,8 +10,11 @@
          <img src="{{items[items.length-1].url}}"/>
         </div>
     </div>
-    <div class="circle-container">
+    <div *ngIf="items" class="circle-container">
         <div class="circle" *ngFor="let item of items" > 
         </div>
+    </div>
+    <div *ngIf="!items" class="no-items">
+        No image available
     </div>
 </div>
