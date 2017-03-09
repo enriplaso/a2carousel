@@ -12,7 +12,7 @@
         </div>
     </div>
     <div *ngIf="items" class="circle-container">
-        <div class="circle" *ngFor="let item of items" > 
+        <div class="circle" *ngFor="let item of items; let i = index" [ngClass]="{'active': i === currentImageIndex}" > 
         </div>
     </div>
     <div *ngIf="!items" class="no-items">
