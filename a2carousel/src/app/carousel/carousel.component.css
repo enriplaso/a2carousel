@@ -29,8 +29,8 @@
 }
 .circle-container .circle {
 	border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(0, 0, 0, 0.29);
     display: inline-flex;
     margin: 5px;	
